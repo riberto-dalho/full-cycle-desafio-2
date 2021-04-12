@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: api
+  name: app
   labels:
-    app: api
+    app: app
 spec:
   selector:
     matchLabels: 
-      app: api
+      app: app
   replicas: 1
   template:
     metadata:
       labels:
-        app: api
+        app: app
     spec:
       containers:
-        - name: nest-api
-          image: "ribertodalho/nest-api"
+        - name: react-app
+          image: "ribertodalho/react-app"
           ports:
-            - containerPort: 3000
+            - containerPort: 3001
