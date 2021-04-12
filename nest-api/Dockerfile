@@ -5,9 +5,22 @@ FROM node:12.14.0-alpine3.11
 
 RUN npm install -g @nestjs/cli@7.5.6
 
-USER node
+#USER node
 
 WORKDIR /home/node/app
+
+#Deploy Kube
+# COPY . .
+
+# RUN npm install
+
+# EXPOSE 3000
+
+# CMD [ "npm", "start" ]
+
+
+
+
 
 #COPY ./docker/entrypoint.sh .
 #RUN ["chmod", "+x", "/docker/entrypoint.sh"]
